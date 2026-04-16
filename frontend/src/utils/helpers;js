@@ -1,0 +1,72 @@
+import jwtDecode from 'jwt-decode';
+
+export const isTokenExpired = (token) => {
+    try {
+        const decoded = jwtDecode(token);
+        const currentTime = Date.now() / 1000;
+        return decoded.exp < currentTime;
+    } catch (error) {
+        return true;
+    }
+};
+
+export const getTokenFromStorage = () => {
+    return localStorage.getItem('token');
+};
+
+export const setTokenToStorage = (token) => {
+    localStorage.setItem('token', token);
+};
+
+export const removeTokenFromStorage = () => {
+    localStorage.removeItem('token');
+};
+
+export const formatDate = (date) => {
+    if (!date) return '';
+    return new Date(date).toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+    });
+};
+
+export const formatDateTime = (dateTime) => {
+    if (!dateTime) return '';
+    return new Date(dateTime).toLocaleString('en-US');
+};
+
+export const truncateText = (text, length) => {
+    if (!text) return '';
+    return text.length > length ? text.substring(0, length) + '...' : text;
+};
+
+export const copyToClipboard = (text) => {
+    navigator.clipboard.writeText(text);
+};
+
+export const getRoleLabel = (role) => {
+    const roleMap = {
+        RESEARCHER: 'Researcher',
+        CONTENT_CURATOR: 'Content Curator',
+        ADMIN: 'Administrator',
+    };
+    return roleMap[role] || role;
+};
+
+export const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+};
+
+export const validatePassword = (password) => {
+    return password && password.length >= 6;
+};
+
+export const generateUUID = () => {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+        const r = (Math.random() * 16) | 0;
+        const v = c === 'x' ? r : (r & 0x3) | 0x8;
+        return v.toString(16);
+    });
+};

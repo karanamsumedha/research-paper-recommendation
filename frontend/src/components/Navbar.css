@@ -1,0 +1,41 @@
+.navbar-custom {
+    background-color: #1a1a1a !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.brand-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+.nav-link-custom {
+    color: #ffffff !important;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.nav-link-custom:hover {
+    color: #4a90e2 !important;
+}
+
+.register-btn {
+    background-color: #4a90e2;
+    border-radius: 5px;
+    padding: 8px 16px !important;
+}
+
+.register-btn:hover {
+    background-color: #357abd !important;
+}
+
+.nav-dropdown-toggle {
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+.nav-dropdown-toggle:hover {
+    color: #4a90e2 !important;
+    border-color: #4a90e2 !important;
+}

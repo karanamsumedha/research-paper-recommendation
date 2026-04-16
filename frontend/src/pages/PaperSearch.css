@@ -1,0 +1,88 @@
+.paper-search-page {
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+.page-title {
+    color: #1a1a1a;
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.search-card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.filter-row {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+
+.results-info {
+    color: #1a1a1a;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.paper-result-card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-left: 4px solid #4a90e2;
+}
+
+.paper-result-card:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    transform: translateX(5px);
+}
+
+.paper-result-title {
+    color: #1a1a1a;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.paper-result-authors {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.paper-result-abstract {
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.paper-result-meta {
+    margin-top: 10px;
+}
+
+.citations-count {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4a90e2;
+    margin: 0;
+}
+
+.empty-icon {
+    font-size: 64px;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 24px;
+    }
+
+    .paper-result-card {
+        margin-bottom: 15px;
+    }
+}

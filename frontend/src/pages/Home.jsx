@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Card, Button, Carousel } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { FaSearch, FaHeart, FaBook, FaCite } from 'react-icons/fa';
+import { FaSearch, FaHeart, FaBook, FaQuoteLeft, FaSync } from 'react-icons/fa';
 import paperService from '../services/paperService';
 import LoadingSpinner from '../components/LoadingSpinner';
 import './Home.css';
@@ -96,7 +96,7 @@ const Home = () => {
                         <Col md={6} lg={3} className="mb-4">
                             <Card className="feature-card">
                                 <Card.Body className="text-center">
-                                    <FaCite className="feature-icon" />
+                                    <FaQuoteLeft className="feature-icon" />
                                     <Card.Title>Citation Generation</Card.Title>
                                     <Card.Text>
                                         Generate citations in APA, IEEE, Chicago, and MLA formats

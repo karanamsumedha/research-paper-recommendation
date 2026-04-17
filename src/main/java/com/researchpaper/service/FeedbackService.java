@@ -23,15 +23,15 @@ public class FeedbackService {
     }
 
     public List<Feedback> getPaperFeedback(Long paperId) {
-        return feedbackRepository.findByPaperId(paperId);
+        return feedbackRepository.findByPaper_PaperId(paperId);
     }
 
     public List<Feedback> getUserFeedback(Long userId) {
-        return feedbackRepository.findByUserId(userId);
+        return feedbackRepository.findByUser_UserId(userId);
     }
 
     public Double getAverageRating(Long paperId) {
-        OptionalDouble average = feedbackRepository.findByPaperId(paperId)
+        OptionalDouble average = feedbackRepository.findByPaper_PaperId(paperId)
                 .stream()
                 .mapToInt(Feedback::getRating)
                 .average();
@@ -39,7 +39,7 @@ public class FeedbackService {
     }
 
     public Integer getTotalFeedback(Long paperId) {
-        return feedbackRepository.findByPaperId(paperId).size();
+        return feedbackRepository.findByPaper_PaperId(paperId).size();
     }
 
     public void deleteFeedback(Long feedbackId) {

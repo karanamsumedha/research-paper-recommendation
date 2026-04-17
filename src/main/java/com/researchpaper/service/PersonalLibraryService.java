@@ -25,7 +25,7 @@ public class PersonalLibraryService {
     }
 
     public List<PersonalLibrary> getUserFavorites(Long userId) {
-        return libraryRepository.findByUserIdAndIsFavorite(userId, true);
+        return libraryRepository.findByUser_UserIdAndIsFavorite(userId, true);
     }
 
     public PersonalLibrary updateReadingProgress(Long libraryId, Integer progress) {

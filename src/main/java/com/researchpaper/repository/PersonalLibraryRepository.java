@@ -9,6 +9,6 @@ import java.util.Optional;
 @Repository
 public interface PersonalLibraryRepository extends JpaRepository<PersonalLibrary, Long> {
     List<PersonalLibrary> findByUserId(Long userId);
-    List<PersonalLibrary> findByUserIdAndIsFavorite(Long userId, Boolean isFavorite);
+    List<PersonalLibrary> findByUser_UserIdAndIsFavorite(Long userId, Boolean isFavorite);
     Optional<PersonalLibrary> findByUserIdAndPaperId(Long userId, Long paperId);
 }

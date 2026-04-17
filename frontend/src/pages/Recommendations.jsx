@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card, Button, Badge, Alert } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { FaHeart, FaBook, FaRefresh, FaArrowRight } from 'react-icons/fa';
+import { FaHeart, FaBook, FaSync, FaArrowRight } from 'react-icons/fa';
 import recommendationService from '../services/recommendationService';
 import authService from '../services/authService';
 import LoadingSpinner from '../components/LoadingSpinner';
@@ -98,7 +98,7 @@ const Recommendations = () => {
                         onClick={handleGenerateRecommendations}
                         disabled={generating}
                     >
-                        <FaRefresh /> {generating ? 'Generating...' : 'Generate New Recommendations'}
+                        <FaSync /> {generating ? 'Generating...' : 'Generate New Recommendations'}
                     </Button>
                 </div>
 
